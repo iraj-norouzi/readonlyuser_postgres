@@ -1,0 +1,2 @@
+ALTER DATABASE "IBSng" SET default_transaction_read_only = false;
+reload postgresql
