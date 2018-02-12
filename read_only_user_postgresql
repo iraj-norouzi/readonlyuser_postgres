@@ -1,0 +1,14 @@
+read-onlu access for remote user
+#################################
+
+su postgres :
+ 
+http://beekeeperdata.com/posts/2016/10/07/read-only-postgres.html
+
+نکته : نام دیتا بیس را در "" قرار دهید
+iptables -t filter -I INPUT -s 94.183.118.103 -p tcp —dport 5432 -j ACCEPT
+iptables -t filter -I INPUT -s 94.183.118.103 -p tcp —dport 5432 -j RETURN
+
+
+postgres.conf listen *
+postgres restart
